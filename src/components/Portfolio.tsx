@@ -3,13 +3,17 @@ import Project from "./Project";
 import ProjectLink from "./ProjectLink";
 
 const aboutNeighbourly = `Local social network and services marketplace, created with React Native, GraphQL and AWS Appsync.`;
+const aboutNeighbourlyWebsite = `Informational site containing links to apps, privacy policy, T's & C's etc.
+Built with React and AWS, it also features Facebook integration and a few other cool features.`;
+const aboutThis = `This website is built with React on the frontend and AWS Amplify at the back, including a REST API to handle the contact form.
+I have made the code fior the front end public and viewable below.`;
 
 const Portfolio = () => {
   return (
     <Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
-          <h2>Mobile apps</h2>
+          <h3>Mobile apps</h3>
         </div>
       </Row>
       <Container fluid="md">
@@ -49,9 +53,31 @@ const Portfolio = () => {
       </Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
-          <h2>Websites - coming soon</h2>
+          <h3>Websites - more coming soon</h3>
         </div>
       </Row>
+      <Container fluid="md">
+        <CardGroup>
+          <Row className="mb-md-5">
+            <Project
+              name="Info Site"
+              about={aboutNeighbourlyWebsite}
+              image="nblyweb"
+            >
+              <ProjectLink
+                text="View"
+                link="https://www.theneighbourlyapp.com/"
+              />
+            </Project>
+            <Project name="This website" about={aboutThis} image="jamielivi">
+              <ProjectLink
+                text="View Code"
+                link="https://github.com/JamieLivi/jamielivi-web"
+              />
+            </Project>
+          </Row>
+        </CardGroup>
+      </Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
           <h2>Other</h2>

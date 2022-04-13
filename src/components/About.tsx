@@ -102,6 +102,7 @@ const About = () => {
             <Link to="contact">get in touch</Link> if you would like a quote for
             me to work on your project.
           </p>
+          <div className="m-0 p-md-4" />
         </Col>
       </Row>
     </Container>

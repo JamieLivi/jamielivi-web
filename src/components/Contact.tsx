@@ -4,8 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
-// + Import the validators
 import { validateEmail } from "../utils/helpers";
 import API from "@aws-amplify/api";
 
@@ -17,12 +15,10 @@ const Contact = () => {
   const [error, setError] = useState("");
 
   const handleInputChange = (e: any) => {
-    // Getting the value and name of the input which triggered the change
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
-    // Based on the input type, we set the state of either email, username, and password
     if (inputType === "name") {
       setName(inputValue);
     } else if (inputType === "email") {
@@ -33,16 +29,12 @@ const Contact = () => {
   };
 
   const handleFormSubmit = async (e: any) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
     setError("");
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
     if (!name) {
       setError("A valid name is required.");
-      // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     }
     if (!validateEmail(email) || !email) {
       setError("A valid email is required.");
@@ -75,7 +67,6 @@ const Contact = () => {
         "An unknown error has occurred. Check your internet connection."
       );
     }
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName("");
     setEmail("");
     setMessage("");
@@ -86,14 +77,16 @@ const Contact = () => {
       <Row>
         <div className="jumbotron jumbotron-fluid mb-0">
           <Container>
-            <h1 className="display-4 pb-0 pb-sm-0 pb-md-0 mb-2 text-center">
+            <h2 className="pb-0 pb-sm-0 pb-md-0 mb-2 text-center">
               Contact Me
-            </h1>
+            </h2>
+            <p className="pb-0 pb-sm-0 pb-md-0 mb-2 text-center">
+              All projects big or small are welcome.
+            </p>
           </Container>
         </div>
       </Row>
 
-      {/* Image of me and a paragraph next to the picture built in Bootstrap */}
       <Row>
         <Container>
           <Form className="form">
@@ -102,7 +95,7 @@ const Contact = () => {
               <Form.Control
                 onChange={handleInputChange}
                 type="text"
-                placeholder="Enter name"
+                placeholder="Ener name"
                 name="name"
                 value={name}
                 required

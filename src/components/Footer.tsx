@@ -21,6 +21,13 @@ function Footer() {
             rel="noopener noreferrer"
           />
         </Col>
+        <Col>
+          <SocialIcon
+            url="https://github.com/jamielivi"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </Col>
         {/* <Col>
           <SocialIcon
             url="https://stackoverflow.com/users/16159639/luke-poirrier"
