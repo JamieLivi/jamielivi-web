@@ -1,0 +1,58 @@
+#about{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+}
+
+pb-0, pb-sm-0, pb-md-0, pb-lg-0, pb-xl-0{
+      padding-bottom: 0 !important;
+}
+
+.jumbotron{
+      padding: 1rem .5rem;
+}
+
+pb-1, pb-sm-1, pb-md-1, pb-lg-1, pb-xl-1{
+      padding-bottom: .25rem !important;
+}
+
+pb-2, pb-sm-2, pb-md-2, pb-lg-2, pb-xl-2{
+      padding-bottom: .5rem !important;
+}
+
+pb-3, pb-sm-3, pb-md-3, pb-lg-3, pb-xl-3{
+      padding-bottom: .75rem !important;
+}
+
+pb-4, pb-sm-4, pb-md-4, pb-lg-4, pb-xl-4{
+      padding-bottom: 1rem !important;
+}
+
+pb-5, pb-sm-5, pb-md-5, pb-lg-5, pb-xl-5{
+      padding-bottom: 1.25rem !important;
+}
+
+pb-5rem, pb-sm-5rem, pb-md-5rem, pb-lg-5rem, pb-xl-5rem{
+      padding-bottom: 5rem !important;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 480px) {
+      .jumbotron{
+            padding: .5rem .25rem;
+      }
+}
+      
