@@ -7,6 +7,9 @@ import Button from "react-bootstrap/Button";
 import { validateEmail } from "../utils/helpers";
 import API from "@aws-amplify/api";
 
+const randInt = (Math.random() * 10000, 10).toString();
+const iFrameSrc = `https://www.peopleperhour.com/hire/widget/4025846952/7127792?width=245&height=320&orientation=vertical&theme=dark&rnd=${randInt}`;
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -147,6 +150,15 @@ const Contact = () => {
           )}
         </Container>
       </Row>
+      <div id="pph-hireme">
+        <iframe
+          title="peopleperhour"
+          src={iFrameSrc}
+          width="245"
+          height="320"
+          scrolling="no"
+        ></iframe>
+      </div>
     </Container>
   );
 };

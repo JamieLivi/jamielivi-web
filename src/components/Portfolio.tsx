@@ -2,9 +2,11 @@ import { Container, Row, CardGroup } from "react-bootstrap";
 import Project from "./Project";
 import ProjectLink from "./ProjectLink";
 
-const aboutNeighbourly = `Local social network and services marketplace, created with React Native, GraphQL and AWS Appsync.`;
+const aboutNeighbourly = `Local social network and services marketplace, created with React Native, GraphQL and AWS Appsync. 
+75K+ iOS downloads and 18K+ Android downloads worldwide.`;
 const aboutNeighbourlyWebsite = `Informational site containing links to apps, privacy policy, T's & C's etc.
 Built with React and AWS, it also features Facebook integration and a few other cool features.`;
+const aboutJokesApp = `Comedy news and joke database, built with React Native. 4.2 star rating from 128 reviews on Android, 4.2 star rating from 64 reviews on iPhone.`;
 const aboutThis = `This website is built with React on the frontend and AWS Amplify at the back, including a REST API to handle the contact form.
 I have made the code fior the front end public and viewable below.`;
 
@@ -29,11 +31,7 @@ const Portfolio = () => {
                 link="https://play.google.com/store/apps/details?id=com.share.community"
               />
             </Project>
-            <Project
-              name="JokesApp"
-              about={"Comedy news and joke database, built with React Native."}
-              image="jokes"
-            >
+            <Project name="JokesApp" about={aboutJokesApp} image="jokes">
               <ProjectLink
                 text="iOS"
                 link="https://apps.apple.com/app/jokesapp-jokes-comedy/id1461744227"

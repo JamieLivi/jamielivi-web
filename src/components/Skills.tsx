@@ -33,13 +33,16 @@ const Skills = (props: Props) => {
               {" "}
               AWS (Extensive experience with Amplify, DynamoDB, Appsync etc.){" "}
             </li>
-            <li> WordPress </li>
+            <li> WordPress (CMS)</li>
             <li>
               {" "}
               Social provider integration (e.g. login with Facebook / Apple /
               Google){" "}
             </li>
             <li> Payment provider integration (e.g. Stripe / PayPal) </li>
+            <li>XCode{` & `}Android Studio</li>
+            <li>Firebase {` & `} analytics</li>
+            <li>Git / GitHub</li>
             <li> Databases (mostly NoSQL) </li>
             <li> HTML Emailing </li>
             <li> Bootstrap </li>
