@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 import "../styles/header.scss";
 import { Link, Outlet, useLocation } from "react-router-dom";
@@ -6,14 +6,19 @@ import Footer from "./Footer";
 
 const Layout = () => {
   let { pathname } = useLocation();
+  const navRef = useRef(null);
 
-  React.useEffect(() => {
+  const onClickLink = () => {
+    console.log(navRef.current);
+  };
+
+  useEffect(() => {
     // ga("send", "pageview");
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
-    <>
+    <Container fluid className="p-0 m-0">
       <Container fluid className="p-0">
         <Row className="p-0">
           <Col className="text-center p-0" md={12}>
@@ -28,20 +33,41 @@ const Layout = () => {
             <div>
               <Container fluid className="p-0">
                 <Navbar
-                  collapseOnSelect
+                  //    onSelect={() => console.log("onselect")}
+                  ref={navRef}
+                  //      collapseOnSelect
                   bg="dark"
                   variant="dark"
                   className="px-2 p-sm-0"
-                  id="navbar-collapse-id"
+                  //        id="navbar-collapse-id"
                   expand="sm"
                 >
                   <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav px-3 px-sm-1 px-md-0" />
 
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className="px-3 px-sm-1 px-md-0">
+                    <Navbar.Collapse
+                      //    onSelect={() => console.log("onselect2")}
+                      id="responsive-navbar-nav"
+                    >
+                      <Nav
+                        //     onSelect={() => console.log("onselevct3")}
+                        className="px-3 px-sm-1 px-md-0"
+                      >
+                        {/* <Nav.Item onSelect={() => console.log("onselect3")}>
+                          <Nav.Link
+                            onClick={onClickLink}
+                            className="nav-link"
+                            //    to="/"
+                          >
+                            Test
+                          </Nav.Link>
+                        </Nav.Item> */}
                         <Nav.Item>
-                          <Link className="nav-link" to="/">
+                          <Link
+                            onClick={onClickLink}
+                            className="nav-link"
+                            to="/"
+                          >
                             About
                           </Link>
                         </Nav.Item>
@@ -77,7 +103,7 @@ const Layout = () => {
       <Container fluid>
         <Footer />
       </Container>
-    </>
+    </Container>
   );
 };
 

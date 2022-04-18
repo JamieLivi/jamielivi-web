@@ -3,15 +3,13 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import "./App.scss";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import API from "@aws-amplify/api";
 
 import awsExports from "./aws-exports";
 import Layout from "./components/Layout.tsx";
 import Skills from "./components/Skills";
 import LoadingContext from "./context/LoadingContext";
-
-// library.add(faB)
 
 API.configure(awsExports);
 
@@ -34,7 +32,6 @@ const App = () => {
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="skills" element={<Skills />} />
             <Route path="contact" element={<Contact />} />
-            {/* <Route index element={<LeagueStandings />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

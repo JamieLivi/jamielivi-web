@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import "../styles/footer.scss";
 
-function Footer() {
+const Footer = () => {
   return (
     <Container className="footer text-center my-auto py-auto">
       <Row id="social-icons">
@@ -31,6 +31,6 @@ function Footer() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Footer;

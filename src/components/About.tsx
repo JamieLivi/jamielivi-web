@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Lottie from "react-lottie";
 import headshot from "../assets/images/headshot.jpg";
@@ -7,7 +7,6 @@ import animation from "../assets/images/cantilever.json";
 import LoadingContext from "../context/LoadingContext";
 import Background from "../parallax/Background";
 import Parallax from "../parallax/Parallax";
-
 import code from "../assets/images/code.jpg";
 import internet from "../assets/images/apps.jpg";
 import { Link } from "react-router-dom";
