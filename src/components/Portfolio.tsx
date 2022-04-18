@@ -15,7 +15,7 @@ const Portfolio = () => {
     <Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
-          <h3>Mobile apps</h3>
+          <h3 className="pb-1 mb-2">Mobile apps</h3>
         </div>
       </Row>
       <Container fluid="md">
@@ -51,7 +51,7 @@ const Portfolio = () => {
       </Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
-          <h3>Websites - more coming soon</h3>
+          <h3 className="py-1 my-2">Websites - more coming soon</h3>
         </div>
       </Row>
       <Container fluid="md">
@@ -78,7 +78,7 @@ const Portfolio = () => {
       </Container>
       <Row>
         <div className="jumbotron jumbotron-fluid">
-          <h2>Other</h2>
+          <h3 className="py-1 my-2">Other</h3>
         </div>
       </Row>
       <Container fluid="md">

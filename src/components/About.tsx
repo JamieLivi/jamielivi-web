@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Lottie from "react-lottie";
 import headshot from "../assets/images/headshot.jpg";
-import "../styles/about.scss";
 import animation from "../assets/images/cantilever.json";
 import LoadingContext from "../context/LoadingContext";
 import Background from "../parallax/Background";
@@ -22,9 +21,13 @@ const About = () => {
 
   if (loading) {
     return (
-      <div className="vh-100 d-flex pt-4">
-        <Lottie options={lottieOptions} height={400} width={400} />
-      </div>
+      <Container>
+        <Row>
+          <div className="vh-100 d-flex pt-4">
+            <Lottie options={lottieOptions} height={400} width={400} />
+          </div>
+        </Row>
+      </Container>
     );
   }
 
@@ -33,17 +36,12 @@ const About = () => {
       <Row>
         <div className="jumbotron jumbotron-fluid mb-0">
           <Container>
-            <h3 className="pb-0 mb-2 text-center">About</h3>
+            <h3 className="pb-1 mb-2 text-center">About</h3>
           </Container>
         </div>
       </Row>
       <Row>
-        <Col
-          xs={8}
-          sm={6}
-          md={3}
-          className="center mx-auto mb-lg-5 mb-m-4 mb-3"
-        >
+        <Col xs={8} sm={6} md={3} className="mx-auto mb-lg-5 mb-m-4 mb-3">
           <img
             src={headshot}
             alt="Jamie"
@@ -51,7 +49,7 @@ const About = () => {
           />
         </Col>
 
-        <Col xs={12} sm={6} className="my-auto" id="about">
+        <Col xs={12} sm={6} className="my-auto">
           <p>
             I'm Jamie and I live in North London. I started coding six years
             ago, have learnt numerous programming languages and frameworks, and
