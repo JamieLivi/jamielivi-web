@@ -73,6 +73,19 @@ const Portfolio = () => {
                 link="https://github.com/JamieLivi/jamielivi-web"
               />
             </Project>
+            <Project
+              name="Basic campervan landing page"
+              about={
+                "Minimal website with booking links for campervan. Built with React and hosted on AWS."
+              }
+              image="camper"
+            >
+              <ProjectLink text="View" link="https://www.frostyvan.com/" />
+              <ProjectLink
+                text="View Code"
+                link="https://github.com/JamieLivi/frostyvan"
+              />
+            </Project>
           </Row>
         </CardGroup>
       </Container>

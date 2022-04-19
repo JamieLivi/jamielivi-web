@@ -8,7 +8,7 @@ interface Props {
 
 const ProjectLink = ({ text, link }: Props) => {
   return (
-    <Button variant="primary p-2 my-1 me-1" href={link}>
+    <Button variant="primary p-2 my-1 me-1" target="_blank" href={link}>
       {text}
     </Button>
   );
