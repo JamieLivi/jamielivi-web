@@ -38,7 +38,10 @@ const Skills = (props: Props) => {
             <li>XCode{` & `}Android Studio</li>
             <li>Firebase {` & `} analytics</li>
             <li>Git / GitHub</li>
-            <li> Databases (mostly NoSQL) </li>
+            <li>
+              {" "}
+              Databases - mostly NoSQL (DynamoDB) but also some SQL (MySQL)
+            </li>
             <li> HTML Emailing </li>
             <li> Bootstrap </li>
           </ul>
